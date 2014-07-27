@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Fireworks Demo
+		</title>
+		<script src="jquery-latest.min.js"></script>
+		<script type="text/javascript" src="jscolor/jscolor.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="bootstrap-3.2.0-dist/3.2.0/js/bootstrap.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body style="background:#000;margin:0">
+	<!--<header>
+		<center><h3 style="color:white">FIREWORKS</h3></center>
+	</header>-->
+	<div class="container-fluid">
+		<div class="row">
+			<canvas id="canvas" class="center-block" style="cursor:crosshair;" onresize="resize();">Canvas is not supported in your browser.</canvas>
+		</div>
+		<div class="row" id="controls">
+			<h3 style="color:white" class="text-center">CONTROLS</h3>
+			<div class="col-lg-10 col-md-offset-2">
+				<div class="col-lg-3">
+					<font color="white">Number of Particles: </font>
+					<input type="text" id="particles" class="form-control" value="50" maxlength="3" size="3" >
+				</div>
+					
+				<div class="col-lg-1">
+					<font color="white">Range: </font>
+					<input type="text" id="range" class="form-control" value="5" maxlength="1" size="1" >
+				</div>	
+
+				<div class="col-lg-2">
+					<font color="white">Speed: </font>
+					<input type="text" id="acceleration" class="form-control" value="5" maxlength="2" size="2" >
+				</div>	
+
+				<div class="col-lg-2">
+					<font color="white">Colour: </font>
+					<input class="color {pickerPosition:'down',pickerClosable:true} form-control" onchange="
+						$('input#r').val(this.color.rgb[0]*100);
+						$('input#g').val(this.color.rgb[1]*100)
+						$('input#b').val(this.color.rgb[2]*100);
+						$('input#hue').val(this.color.hsv[0]*100);
+						$('input#sat').val(this.color.hsv[1]*100)
+						$('input#val').val(this.color.hsv[2]*100);">
+				</div>
+			</div>
+			<br>
+			<center>
+				<input type="button" class="btn btn-default" id="update" value="Update Settings" onclick="update_settings();">
+				<input type="hidden" id="r" value="127"><input type="hidden" id="g" value="127"><input type="hidden" id="b" value="127">
+				<input type="hidden" id="hue" value="120"><input type="hidden" id="sat" value="0"><input type="hidden" id="val" value="0">
+				<br><br><br>
+				<p style="color:white">Designed by: Akshay</p>
+			</center>
+		</div>
+	</div>
+	<script src="fireworks.js"></script>
+	</body>
+</html>
