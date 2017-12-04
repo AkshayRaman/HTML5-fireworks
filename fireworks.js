@@ -12,8 +12,8 @@ $PARTICLE_SPEED = 5;
 $ACCELERATION = 5;
 $HUE = 120;
 
-var canvas = document.getElementById( 'canvas' ),
-ctx = canvas.getContext( '2d' ),
+var canvas = document.getElementById('canvas'),
+ctx = canvas.getContext('2d'),
 cw = window.innerWidth,
 ch = window.innerHeight - $("div#controls").height()- $("header").height()-100,
 
@@ -32,8 +32,8 @@ mouse_x,
 mouse_y;
 		
 // set canvas dimensions
-//canvas.width = cw;
-//canvas.height = ch;
+canvas.width = cw;
+canvas.height = ch;
 
 
 // create firework

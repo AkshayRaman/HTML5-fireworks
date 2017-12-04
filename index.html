@@ -19,12 +19,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body style="background:#000;margin:0">
-	<!--<header>
-		<center><h3 style="color:white">FIREWORKS</h3></center>
-	</header>-->
 	<div class="container-fluid">
 		<div class="row">
-			<canvas id="canvas" class="center-block" style="cursor:crosshair;" onresize="resize();">Canvas is not supported in your browser.</canvas>
+			<canvas id="canvas" class="center-block" style="cursor:crosshair;">Canvas is not supported in your browser.</canvas>
 		</div>
 		<div class="row" id="controls">
 			<h3 style="color:white" class="text-center">CONTROLS</h3>
@@ -42,7 +39,7 @@
 				<div class="col-lg-2">
 					<font color="white">Speed: </font>
 					<input type="text" id="acceleration" class="form-control" value="5" maxlength="2" size="2" >
-				</div>	
+				</div>
 
 				<div class="col-lg-2">
 					<font color="white">Colour: </font>
@@ -57,6 +54,7 @@
 			</div>
 			<br>
 			<center>
+				<br><br><br>
 				<input type="button" class="btn btn-default" id="update" value="Update Settings" onclick="update_settings();">
 				<input type="hidden" id="r" value="127"><input type="hidden" id="g" value="127"><input type="hidden" id="b" value="127">
 				<input type="hidden" id="hue" value="120"><input type="hidden" id="sat" value="0"><input type="hidden" id="val" value="0">
