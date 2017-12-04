@@ -32,9 +32,10 @@ mouse_x,
 mouse_y;
 		
 // set canvas dimensions
-canvas.width = cw;
+canvas.width = cw*0.8;
 canvas.height = ch;
-
+console.log(canvas.width)
+console.log(canvas.height)
 
 // create firework
 function Firework( sx, sy, tx, ty ) {
