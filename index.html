@@ -18,7 +18,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8"/>
 	</head>
-	<body style="background:#000;margin:0">
+	<body style="background:#000;overflow:hidden">
 	<div class="container-fluid">
 		<div class="row">
 			<canvas id="canvas" class="center-block" style="cursor:crosshair">Canvas is not supported in your browser.</canvas>
@@ -27,22 +27,22 @@
 			<h3 style="color:white" class="text-center">CONTROLS</h3>
 			<div class="col-lg-10 col-md-offset-3">
 				<div class="col-lg-3">
-					<font color="white">Number of Particles </font>
+					<font color="white">Number of Particles</font>
 					<input type="text" id="particles" class="form-control" value="50" maxlength="3" size="3" onchange="update_settings();">
 				</div>
 					
 				<div class="col-lg-1">
-					<font color="white">Range </font>
+					<font color="white">Range</font>
 					<input type="text" id="range" class="form-control" value="5" maxlength="1" size="1" onchange="update_settings();">
 				</div>	
 
 				<div class="col-lg-1">
-					<font color="white">Speed </font>
+					<font color="white">Speed</font>
 					<input type="text" id="acceleration" class="form-control" value="5" maxlength="2" size="2" onchange="update_settings();">
 				</div>
 
 				<div class="col-lg-2">
-					<font color="white">Colour </font>
+					<font color="white">Colour</font>
 					<input class="color {pickerPosition:'down',pickerClosable:true} form-control" onchange="
 						$('input#r').val(this.color.rgb[0]*100);
 						$('input#g').val(this.color.rgb[1]*100)
