@@ -32,10 +32,8 @@ mouse_x,
 mouse_y;
 		
 // set canvas dimensions
-canvas.width = cw*0.8;
+canvas.width = cw;
 canvas.height = ch;
-console.log(canvas.width)
-console.log(canvas.height)
 
 // create firework
 function Firework( sx, sy, tx, ty ) {
@@ -106,7 +104,10 @@ Firework.prototype.draw = function() {
 	// move to the last tracked coordinate in the set, then draw a line to the current x and y
 	ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
 	ctx.lineTo( this.x, this.y );
-	ctx.strokeStyle = "rgba("+parseInt($('input#r').val())+","+parseInt($('input#g').val())+","+parseInt($('input#b').val())+", 1)";
+    r = parseInt($('input#r').val());
+    g = parseInt($('input#g').val());
+    b = parseInt($('input#b').val());
+	ctx.strokeStyle = "rgba("+r+","+g+","+b+", 1)";
 	ctx.stroke();
 	
 	ctx.beginPath();
